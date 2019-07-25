@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+<h1>已登录，成功</h1></hr>
+
+<h1 th:text="'在线人数：' + ${onlineCount} + '人'"></h1> </hr>
+<h1 th:text="'用户信息：' + ${user.userName}"></h1></hr>
+<h1 th:text="'用户角色：' + ${user.roles[0].roleName}"></h1></hr>
+<h1 th:text="'sessionId:' + ${sessionId}"></h1></hr>
+
+<a th:href="@{/user/add}">添加用户</a>
+<a th:href="@{/user/product}">添加用户</a>
+</body>
+</html>
